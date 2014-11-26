@@ -1,0 +1,74 @@
+@mixin relative() {
+
+  position: relative;
+  display: block;
+  top: auto; left: auto;
+  bottom: auto; right: auto;
+  height: auto; width: auto;
+
+}
+
+.vc {
+
+  position: absolute;
+  display: table;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+
+  > div {
+
+    display: table-cell;
+    vertical-align: middle;
+
+    @include mobile-screen {
+      @include relative();
+    }
+
+  }
+
+  @include mobile-screen {
+    @include relative();
+  }
+
+}
+
+.tight-top-margin {
+
+  margin-top: 0.2em;
+  
+}
+
+.no-top-margin {
+
+  margin-top: 0;
+
+}
+
+.tight-bot-margin {
+
+  margin-bottom: 0.3em;
+  
+}
+
+.no-bot-margin {
+
+  margin-bottom: 0;
+
+}
+
+.loose-text {
+
+  letter-spacing: 4px;
+
+}
+
+.pull-right {
+
+  float: right;
+  
+}
+
+.pull-left {
+
+  float: left;
+}

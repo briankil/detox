@@ -1,0 +1,9 @@
+{
+  "name": "detox",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass-official": "~3.2.0",
+    "modernizr": "~2.8.2",
+    "skrollr": "~0.6.27"
+  }
+}

@@ -1,0 +1,35 @@
+@mixin mobile-screen() {
+  @media only screen and (max-width: 760px) { @content; }
+}
+
+.hidden-mobile {
+  @include mobile-screen {
+    display: none !important;
+  }
+}
+.visible-mobile {
+  display: none !important;
+  @include mobile-screen {
+    display: block !important;
+  }
+}
+
+@mixin tablet-screen() {
+  @media only screen and (max-width: 1180px) and (min-width: 760px) { @content; }
+}
+
+.hidden-tablet {
+  @include tablet-screen {
+    display: none !important;
+  }
+}
+
+@mixin short-screen() {
+  @media only screen and (min-width: 760px) and (max-height: 760px) { @content; }
+}
+
+.hidden-short {
+  @include short-screen {
+    display: none !important;
+  }
+}

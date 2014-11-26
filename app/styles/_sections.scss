@@ -1,0 +1,272 @@
+section {
+
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+
+  @include mobile-screen {
+
+    padding: 40px;
+    overflow-x: hidden;
+    @include relative();
+
+  }
+  
+}
+
+.content-left {
+
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%; width: 40%;
+
+  @include mobile-screen {
+    @include relative();
+  }
+
+}
+
+.content-right {
+
+  position: absolute;
+  top: 0; left: 40%;
+  height: 100%; width: 60%;
+
+  @include mobile-screen {
+    @include relative();
+  }
+
+}
+
+.content-sidebar {
+
+  position: fixed;
+  text-align: right;
+  z-index: 10;
+  overflow: hidden;
+
+  @include mobile-screen {
+    @include relative();
+  }
+
+
+
+}
+
+.content-top {
+
+  position: absolute;
+  bottom: 100%; left: 0;
+  width: 100%; height: 28%;
+  margin-bottom: -1px; // fixes strange 1px rendering issue on chrome
+  z-index: 2;
+
+  .content-copy {
+    padding-top: 40px;
+  }
+
+  @include tablet-screen {
+    font-size: 0.8em;
+  }
+
+  @include mobile-screen {
+
+    text-align: center;
+    font-size: 0.8em;
+
+    @include relative();
+
+    .content-copy {
+      padding-top: 0;
+    }
+
+  }
+
+  @include short-screen {
+    height: 12%;
+  }
+
+  &::before {
+
+    position: absolute;
+    bottom: 100%; left: 0;
+    width: 100%; height: 4px;
+    content: ' ';
+
+  }
+
+  
+
+
+}
+
+.content-with-bar {
+
+  height: 85%;
+
+  @include mobile-screen {
+    @include relative();
+  }
+
+  @include short-screen {
+    height: 100%;
+  }
+
+}
+
+.content-copy {
+
+  padding-left: 70px;
+  padding-right: 70px;
+
+  @include mobile-screen {
+    padding: 0;
+  }
+
+}
+
+.copy {
+
+  padding: 70px;
+
+  @include mobile-screen {
+    padding: 0;
+  }
+
+  &.scrolling-copy {
+
+    margin-top: 50%;
+
+    @include mobile-screen {
+      margin-top: 0;
+    }
+  }
+
+}
+
+.sidebar-copy {
+
+  max-width: 340px;
+  display: inline-block;
+
+  h1 {
+
+    font-family: 'Knockout 30 A', 'Knockout 30 B';
+    font-size: 5.5em;
+
+  }
+
+  h3 {
+
+    font-family: 'Knockout 30 A', 'Knockout 30 B';
+    font-size: 2.5em;
+    font-weight: 300;
+
+  }
+
+  h5 {
+
+    letter-spacing: 4px;
+    line-height: 2em;
+    font-size: 1em;
+
+  }
+
+  @include mobile-screen {
+
+    text-align: center;
+    max-width: 100%;
+
+    h1 {
+      font-size: 3em;
+    }
+
+  }
+
+  @include tablet-screen {
+
+    font-size: 0.8em;
+
+  }
+
+}
+
+// icons
+
+.icon-header {
+
+  position: relative;
+  width: 100%; height: 100px;
+  line-height: 1.9em;
+  letter-spacing: 2px;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  > img {
+
+    height: 100%;
+    width: 60px;
+
+    
+  }
+
+  .vc {
+
+    left: 80px;
+
+  }
+
+  @include mobile-screen {
+
+    height: auto;
+    margin: 40px 0 0 0;
+    text-align: center;
+
+    .vc {
+      left: auto;
+      margin: 15px 0;
+    }
+
+  }
+
+}
+
+.quote {
+
+  padding: 20px;
+  overflow: hidden;
+  font-family: 'Sentinel SSm A', 'Sentinel SSm B';
+  font-style: italic;
+
+  .pull-right {
+
+    font-style: normal;
+  }
+
+  .author {
+
+    position: relative;
+    font-style: normal;
+    font-size: 1.2em;
+
+    &::before {
+
+      position: absolute;
+      right: 100%;
+      margin-right: 4px;
+      content: '-';
+
+    }
+
+  }
+
+  .position {
+
+    font-family: 'Gotham SSm A', 'Gotham SSm B';
+    color: $yellow;
+    letter-spacing: 4px;
+    font-weight: 600;
+
+  }
+
+}

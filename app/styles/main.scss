@@ -1,0 +1,688 @@
+@import '_colors';
+@import '_breakpoints';
+@import '_global';
+@import '_utils';
+@import '_animations';
+@import '_sections';
+@import '_buttons';
+
+
+// masthead section
+
+#section-masthead {
+
+  background: $green;
+
+  .vignette {
+
+    position: absolute;
+    top: 0; left: 0;
+    bottom: 0; right: 0;
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(50,96,82,0) 40%, rgba(50,96,82,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(40%,rgba(50,96,82,0)), color-stop(100%,rgba(50,96,82,1))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(50,96,82,0) 40%,rgba(50,96,82,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  rgba(50,96,82,0) 40%,rgba(50,96,82,1) 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  rgba(50,96,82,0) 40%,rgba(50,96,82,1) 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  rgba(50,96,82,0) 40%,rgba(50,96,82,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00326052', endColorstr='#326052',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+  }
+
+  .glow {
+
+    position: absolute;
+    top: 0; left: 0;
+    bottom: 0; right: 0;
+    background: url(../images/glow.png) no-repeat 25% 50%;
+
+  }
+
+  .bottle {
+
+    max-width: 100%;
+    width: 50%;
+    margin: 30px auto;
+
+  }
+
+  .yellow-text {
+    font-weight: 600;
+  }
+
+  @include mobile-screen {
+    padding: 120px 40px 40px;
+  }
+
+}
+
+// hydration section
+
+#section-hydration {
+
+  background: $yellow;
+
+  .content-top {
+
+    background: $yellow;
+
+    &::before {
+
+      background: url('../images/yellow-triangle.png') top left repeat;
+
+    }
+
+  }
+
+  .hydration-icon {
+
+    display: inline-block;
+    width: 60px; 
+    margin: 0 25px 15px 0;
+    text-align: center;
+    font-family: 'Sentinel SSm A', 'Sentinel SSm B';
+
+    .icon-art {
+      margin-bottom: 10px;
+    }
+
+    @include tablet-screen {
+      display: none;
+    }
+
+    @include mobile-screen {
+      width: 26%;
+      margin: 15px 3%;
+    }
+
+  }
+
+  @include mobile-screen {
+
+    .content-copy {
+      padding-top: 20px;
+    }
+
+  }
+
+}
+
+// aloe section
+
+#section-aloe {
+
+  background: $orange;
+  color: $yellow;
+
+  .content-top {
+
+    background: $orange;
+
+    &::before {
+
+      background: url('../images/orange-triangle.png') top left repeat;
+
+    }
+
+  }
+
+  @include mobile-screen {
+    text-align: center;
+  }
+
+}
+
+// bottle section
+
+#section-bottle {
+
+  position: fixed;
+  top: 5%; 
+  height: 90%;
+  background: url(../images/bottle.png) no-repeat 100% 50%;
+  background-size: contain;
+  backface-visibility: hidden;
+
+  // set max height
+
+  @media only screen and (min-height: 880px) { 
+
+    top: 50%;
+    height: 802px;
+    margin-top: -401px;
+
+  }
+
+
+}
+
+#section-aloe-sidebar {
+
+  background: $purple;
+  color: $yellow;
+
+}
+
+#section-skeleton {
+
+  background: $green;
+  overflow: hidden;
+
+}
+
+#section-skeleton-info {
+
+  background: $purple;
+  color: $yellow;
+
+  h1 {
+
+    width: 300px;
+    font-family: 'Sentinel SSm A', 'Sentinel SSm B';
+    font-size: 4em;
+   
+    @include short-screen {
+      width: 400px;
+      font-size: 3em;
+    }
+
+  }
+
+  .skeleton-text-items {
+
+    position: relative;
+    height: 200px;
+
+    .skeleton-text-item {
+
+      position: absolute;
+      top: 0;
+
+    }
+
+  }
+
+  @include mobile-screen {
+
+    text-align: center;
+
+    h1 {
+      font-size: 2em;
+    }
+
+    .skeleton-text-items {
+
+      @include relative();
+
+      .skeleton-text-item {
+
+        @include relative();
+
+      }
+
+    }
+
+  }
+
+}
+
+#skeleton {
+
+  position: fixed;
+  top: 50%; right: -145px;
+  height: 1500px; width: 810px;
+  margin-top: -400px;
+
+}
+
+#section-our-story {
+
+  background: $yellow;
+  text-align: right;
+
+}
+
+#section-our-story-content {
+
+  background: $orange;
+  color: $yellow;
+
+}
+
+#section-promise {
+
+  background: $green;
+  color: $yellow;
+
+}
+
+#section-our-promise-content {
+
+  background: $yellow;
+
+  h4 {
+
+    font-family: 'Knockout 30 A', 'Knockout 30 B';
+    font-size: 3.5em;
+    margin-bottom: 30px;
+    font-weight: 300;
+
+  }
+
+}
+
+#section-team-content {
+
+  background: $purple;
+  color: $yellow;
+
+  .member {
+
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 200px;
+    margin: 15px 0;
+
+    .headshot {
+
+      display: inline-block;
+      width: 130px; height: 130px;
+      background: $yellow;
+      border-radius: 100%;
+
+    }
+
+    h2 {
+      font-size: 1.1em;
+      letter-spacing: 1px;
+    }
+
+    h5 {
+      letter-spacing: 4px;
+      line-height: 1.6em;
+    }
+
+  }
+
+  @include short-screen {
+    .member {
+      font-size: 0.9em;
+      .headshot {
+        width: 110px; height: 110px;
+      }
+    }
+
+  }
+
+  @media only screen and (max-width: 1280px)  { 
+    .member {
+      width: 160px;
+      .headshot {
+        width: 100px; height: 100px;
+      }
+      h2 {
+        font-size: 0.9em;
+      }
+
+      h5 {
+        font-size: 0.6em;
+      }
+    }
+  }
+
+
+  @include mobile-screen {
+
+    text-align: center;
+    padding-top: 0;
+
+    .member {
+      .headshot {
+        width: 100px; height: 100px;
+      }
+
+      h2 {
+        font-size: 1.1em;
+      }
+
+      h5 {
+        font-size: 0.8em;
+      }
+
+    }
+
+  
+  }
+}
+
+#section-team {
+
+  background: $yellow;
+  text-align: right;
+
+  @include mobile-screen {
+
+    background: $purple;
+    color: $yellow;
+
+  }
+
+}
+
+#section-contact {
+
+  background: $green;
+  color: $yellow;
+  text-align: center;
+  z-index: 20;
+
+  h1 {
+
+    font-family: 'Sentinel SSm A', 'Sentinel SSm B';
+    font-weight: 600;
+    font-size: 6.5em;
+    letter-spacing: -6px;
+
+  }
+  
+
+  .info {
+
+   
+    line-height: 50px;
+    font-size: 1.8em;
+    letter-spacing: 3px;
+    font-family: 'Knockout 30 A', 'Knockout 30 B';
+
+    img {
+
+      vertical-align: middle;
+    }
+
+  }
+
+  .short-text {
+    font-size: 0.5em;
+    vertical-align: middle;
+
+  }
+
+  .small-text {
+    font-size: 0.7em;
+  }
+
+  .normal-text {
+    vertical-align: middle;
+  }
+
+  @include mobile-screen {
+
+    font-size: 0.8em;
+
+    h1 {
+      font-size: 5.5em;
+      margin-bottom: 20px;
+    }
+
+    .info {
+      line-height: 25px;
+    }
+  }
+  
+
+}
+
+#section-preloader {
+
+  position: fixed;
+  background: $purple;
+  color: $yellow;
+  text-align: center;
+  z-index: 300;
+
+  .dots {
+
+    margin: 25px;
+
+    .dot {
+
+      display: inline-block;
+      width: 15px; height: 15px;
+      background: $yellow;
+      border-radius: 100%;
+      margin: 0 10px;
+
+      &.dot1 {
+        @include animation(scale-in 1.5s infinite cubic-bezier(0.175, 0.885, 0.320, 1.475), scale-out 2s 4s infinite cubic-bezier(0.175, 0.885, 0.320, 1.475));
+      }
+
+      &.dot2 {
+        @include animation(scale-in 1.5s 0.1s infinite cubic-bezier(0.175, 0.885, 0.320, 1.475), scale-out 2s 4s infinite cubic-bezier(0.175, 0.885, 0.320, 1.475));
+      }
+
+      &.dot3 {
+        @include animation(scale-in 1.5s 0.2s infinite cubic-bezier(0.175, 0.885, 0.320, 1.475), scale-out 2s 4s infinite cubic-bezier(0.175, 0.885, 0.320, 1.475));
+      }
+
+    }
+  }
+
+}
+
+body.loaded {
+
+  #section-preloader {
+    @include animation(slide-down 1s forwards cubic-bezier(0.860, 0.000, 0.070, 1.000));
+  }
+
+  #section-hydration {
+    .content-top {
+      @include animation(slide-up 1s forwards cubic-bezier(0.860, 0.000, 0.070, 1.000));
+    }
+  }
+
+
+}
+
+
+$nav-width: 250px;
+$nav-item-height: 70px;
+
+nav {
+
+  position: fixed;
+  top: 0; left: 0;
+  bottom: 0;
+  width: $nav-width;
+  background: #45b97c;
+  color: $yellow;
+  letter-spacing: 2px;
+  font-weight: 600;
+  transform: translate3d(-100%,0,0);
+  transition: all 0.5s cubic-bezier(0.860, 0.000, 0.070, 1.000);
+  z-index: 100;
+
+  ul {
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+
+      position: relative;
+      width: 100%; height: $nav-item-height;
+      overflow: hidden;
+
+      a {
+
+        position: absolute;
+        top: 0; left: 0;
+        bottom: 0; right: 0;
+        padding: 0 35px;
+        line-height: $nav-item-height;
+        transition: all 0.3s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+
+        &:last-child {
+
+          transform: translate3d(-100%,0,0);
+          background: $yellow;
+          color: $green;
+
+        }
+
+      }
+
+      &:hover, &.active {
+
+        a:first-child {
+          transform: translate3d(0,100%,0);
+        }
+
+        a:last-child {
+          transform: translate3d(0,0,0);
+        }
+
+      }
+
+      &.active {
+
+        a:last-child {
+          background: $purple;
+          color: $green;
+        }
+      }
+
+    }
+  }
+
+  @include mobile-screen {
+    font-size: 1em;
+
+    ul {
+
+      li {
+
+        height: 50px;
+
+        a {
+
+          line-height: 50px;
+        }
+      }
+
+    }
+
+    
+  }
+
+  .social {
+
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 100%; height: 70px;
+    line-height: 70px;
+    text-align: center;
+
+    a {
+
+      display: inline-block;
+      margin: 0px 15px;
+    }
+
+  }
+}
+
+
+
+body.nav-open {
+
+  nav {
+    transform: translate3d(0,0,0);
+  }
+
+  header {
+
+    .open-nav {
+      transform: translate3d(250px,0,0);
+    }
+
+  }
+
+}
+
+header {
+
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 60px;
+  z-index: 50;
+
+  .logo {
+
+    width: 40px;
+    margin: 18px 30px 0 0;
+
+  }
+
+  .btn-outline {
+
+    margin: 18px 20px;
+    border-width: 2px;
+    border-color: #E3DBBB !important;
+    color: #E3DBBB !important;
+
+    .btn-outline-state {
+      padding: 0 30px;
+      line-height: 36px;
+    }
+
+  }
+
+  .btn-navigation {
+    width: 40px; height: 40px;
+  }
+
+  .open-nav {
+
+    display: block;
+    width: 50px;
+    padding: 30px;
+    transition: all 0.5s cubic-bezier(0.860, 0.000, 0.070, 1.000);
+  }
+
+  @include mobile-screen {
+
+   background: $purple;
+
+    .open-nav {
+      padding: 20px;
+    }
+
+    .logo {
+      margin: 12px 20px 0 0;
+    }
+
+    .btn-outline {
+      margin: 11px 20px;
+    }
+  }
+
+  @include tablet-screen {
+
+    background: $purple;
+
+    .open-nav {
+      padding: 20px;
+    }
+
+    .logo {
+      margin: 12px 20px 0 0;
+    }
+
+    .btn-outline {
+      margin: 11px 20px;
+    }
+  }
+
+}
