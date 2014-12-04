@@ -285,10 +285,22 @@
 
     .headshot {
 
+      position: relative;
       display: inline-block;
       width: 130px; height: 130px;
       background: $yellow;
       border-radius: 100%;
+      overflow: hidden;
+
+      > img {
+
+        position: absolute;
+        left: 50%; top: 50%;
+        width: 150px;
+        max-width: none;
+        margin: -75px;
+
+      }
 
     }
 
