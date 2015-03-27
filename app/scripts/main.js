@@ -1,5 +1,5 @@
 function duration(number) {
-  return number * 1;
+  return number * 0.7;
 }
 
 var breakpoints = {};
@@ -32,7 +32,8 @@ breakpoints.skeleton_animation_8_start = breakpoints.skeleton_animation_7_end + 
 breakpoints.skeleton_animation_8_end = breakpoints.skeleton_animation_8_start + duration(500);
 breakpoints.skeleton_animation_end = breakpoints.skeleton_animation_8_end;
 
-breakpoints.story_start = breakpoints.skeleton_animation_end + duration(500);
+//breakpoints.story_start = breakpoints.skeleton_animation_end + duration(500);
+breakpoints.story_start = breakpoints.skeleton_end + duration(10);
 breakpoints.story_end = breakpoints.story_start + duration(500);
 breakpoints.story_text_end = breakpoints.story_end + duration(2000);
 breakpoints.promise_start = breakpoints.story_text_end;
