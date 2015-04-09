@@ -136,11 +136,75 @@
 #section-bottle {
 
   position: fixed;
-  top: 5%; 
+  top: 8%; 
   height: 90%;
-  background: url(../images/bottle.png) no-repeat 100% 50%;
-  background-size: contain;
-  backface-visibility: hidden;
+
+  .bottle-slider {
+
+    .bottle-slider-content {
+
+      position: absolute;
+      top: 20px; bottom: 40px;
+      left: 0; right: 0;
+
+      > div {
+
+        position: absolute;
+        top: 0; 
+        bottom: 0; right: 0;
+        width: 300px;
+        background-size: contain;
+        backface-visibility: hidden;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        @include animation(slider-out 1s cubic-bezier(0.860, 0.000, 0.070, 1.000) forwards);
+
+
+        &.active {
+          @include animation(slider-in 1s cubic-bezier(0.860, 0.000, 0.070, 1.000) forwards);
+        }
+
+        &:first-child {
+          background-image: url(../images/bottles/detox-original.png);
+        }
+        &:nth-child(2) {
+          background-image: url(../images/bottles/detox-mango.png);
+        }
+        &:nth-child(3) {
+          background-image: url(../images/bottles/detox-pina.png);
+        }
+
+      }
+
+    }
+
+    .bottle-slider-nav {
+
+      position: absolute;
+      bottom: 0; right: 0;
+      height: 40px; 
+      width: 300px;
+      text-align: center;
+
+      > div {
+
+        display: inline-block;
+        width: 10px; height: 10px;
+        border-radius: 100%;
+        background: $dark-purple;
+        margin: 20px 8px;
+        cursor: pointer;
+
+        &.active {
+          background: $green;
+        }
+
+      }
+
+    }
+
+
+  }
 
   // set max height
 

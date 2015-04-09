@@ -58,3 +58,13 @@ keyframe animation
   0% { transform: scale(1); }
   20% { transform: scale(0.2);  }
 }
+
+@include keyframes(slider-out) {
+  0% { transform: translate3d(0,0,0); }
+  100% { transform: translate3d(-100px,0, 0); opacity: 0; }
+}
+
+@include keyframes(slider-in) {
+  0% { transform: translate3d(100px,0,0); opacity: 0; }
+  100% { transform: translate3d(0,0,0); opacity: 1; }
+}
